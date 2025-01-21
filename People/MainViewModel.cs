@@ -8,6 +8,8 @@ namespace People
 {
     public class MainViewModel : INotifyPropertyChanged
     {
+        private readonly IMessageService _messageService;
+
         private ObservableCollection<Person> _list = new(App.PersonRepo.GetAllPeople());
         private Person _selectedPerson;
         private string _currentName;
@@ -55,6 +57,7 @@ namespace People
 
         public MainViewModel()
         {
+            this._messageService = DependencyService.Get<IMessageService>();
             GetAllCommand = new Command(GetPeople);
             AddPersonCommand = new Command(SavePerson);
             DeleteCommand = new Command<Person>(DeletePerson);
@@ -84,6 +87,7 @@ namespace People
         {
             if (person != null)
             {
+                _messageService.ShowAsync("Ariel Anchapaxi ;)");
                 App.PersonRepo.DeletePerson(person.Id);
                 list.Remove(person);
                 OnPropertyChanged(nameof(status));

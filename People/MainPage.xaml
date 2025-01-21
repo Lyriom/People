@@ -13,7 +13,7 @@
     <ScrollView x:Name="JosueScrollView">
         <VerticalStackLayout x:Name="JosueStackLayout1" Padding="50" Spacing="30">
             <Grid x:Name="JosueGrid1" ColumnDefinitions="0.25*,*" BackgroundColor="{StaticResource Primary}">
-                <Image x:Name="JosueImage" Source="selfie.jpg"/>
+                <Image x:Name="JosueImage" Source="imagen.jpeg"/>
                 <VerticalStackLayout x:Name="JosueStackLayout2" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center">
                     <Label x:Name="JosueLbl1" Text="Josue Riera" TextColor="{StaticResource White}" FontSize="Title" FontAttributes="Bold"/>
                     <Label x:Name="JosueLbl2" Text="hola profe" TextColor="{StaticResource Gray950}" FontSize="Small"/>
@@ -35,7 +35,7 @@
                             <Grid x:Name="JosueGrid3" ColumnDefinitions="*,*,*">
                                 <Label x:Name="JosueLblId" Text="{Binding Id}" TextColor="{StaticResource Black}"/>
                                 <Label x:Name="JosueLblName" Grid.Column="1" Text="{Binding Name}" TextColor="{StaticResource Black}"/>
-                                <Button x:Name="JosueBtnDelete" Text="Delete" Background="{StaticResource Tertiary}" Grid.Column="2" Command="{Binding Source={x:Reference JosueCollectionView}, Path=BindingContext.DeleteCommand}" CommandParameter="{Binding .}"/>
+                                <Button x:Name="JosueBtnDelete" Text="Eliminar" Background="{StaticResource Tertiary}" Grid.Column="2" Command="{Binding Source={x:Reference JosueCollectionView}, Path=BindingContext.DeleteCommand}" CommandParameter="{Binding .}"/>
                             </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>

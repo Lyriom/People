@@ -6,6 +6,7 @@
 
         public App(PersonRepository repo)
         {
+            DependencyService.Register<IMessageService, MessageService>();
             InitializeComponent();
             MainPage = new AppShell();
             PersonRepo = repo;  

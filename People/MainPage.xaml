@@ -15,8 +15,8 @@
             <Grid x:Name="JosueGrid1" ColumnDefinitions="0.25*,*" BackgroundColor="{StaticResource Primary}">
                 <Image x:Name="JosueImage" Source="selfie.jpg"/>
                 <VerticalStackLayout x:Name="JosueStackLayout2" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center">
-                    <Label x:Name="JosueLbl1" Text="ARIEL ANCHAPAXI" TextColor="{StaticResource White}" FontSize="Title" FontAttributes="Bold"/>
-                    <Label x:Name="JosueLbl2" Text="Future Enginner if God wants ;)" TextColor="{StaticResource Gray950}" FontSize="Small"/>
+                    <Label x:Name="JosueLbl1" Text="Josue Riera" TextColor="{StaticResource White}" FontSize="Title" FontAttributes="Bold"/>
+                    <Label x:Name="JosueLbl2" Text="hola profe" TextColor="{StaticResource Gray950}" FontSize="Small"/>
                 </VerticalStackLayout>
             </Grid>
 

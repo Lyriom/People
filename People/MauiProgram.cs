@@ -19,6 +19,9 @@ namespace People
     		builder.Logging.AddDebug();
 #endif
 
+            string dbPath = FileAccessHelper.GetLocalFilePath("josure_riera.db3");
+            builder.Services.AddSingleton<PersonRepository>(s => ActivatorUtilities.CreateInstance<PersonRepository>(s, dbPath));
+
             return builder.Build();
         }
     }
